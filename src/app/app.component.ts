@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { SintasisTemplateComponent } from "./sintasis-template/sintasis-template.component";
+import { EventosComponent } from "./eventos/eventos.component";
+import { EnlacePropiedadesComponent } from "./Enlace-Propiedades/Enlace-Propiedades.component";
+import { DadoComponent } from './dado/dado.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet, 
+    SintasisTemplateComponent, 
+    EventosComponent, 
+    EnlacePropiedadesComponent,
+    DadoComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
