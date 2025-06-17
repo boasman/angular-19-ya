@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SintasisTemplateComponent } from "./sintasis-template/sintasis-template.component";
 import { EventosComponent } from "./eventos/eventos.component";
@@ -6,19 +6,21 @@ import { EnlacePropiedadesComponent } from "./Enlace-Propiedades/Enlace-Propieda
 import { DadoComponent } from './dado/dado.component';
 import { CronometroComponent } from './Cronometro/Cronometro.component';
 import { SelectorNumericoComponent } from './selector-numerico/selector-numerico.component';
+import { SelectorNumericoTwoComponent } from './selector-numerico-two/selector-numerico-two.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, 
-    SintasisTemplateComponent, 
-    EventosComponent, 
+    RouterOutlet,
+    SintasisTemplateComponent,
+    EventosComponent,
     EnlacePropiedadesComponent,
     DadoComponent,
     CronometroComponent,
-    SelectorNumericoComponent
-  ],
+    SelectorNumericoComponent,
+    SelectorNumericoTwoComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -84,6 +86,17 @@ tirar(){
     this.resultado = 'Perdio';
   }
 }
+
+  @ViewChild('selector1') selector1!: SelectorNumericoTwoComponent;
+  @ViewChild('selector2') selector2!: SelectorNumericoTwoComponent;
+
+  fijarSelector1(valor:number) {
+    this.selector1.fijar(valor);
+  }
+
+  fijarSelector2(valor:number) {
+    this.selector2.fijar(valor);
+  }
 
 
 }
