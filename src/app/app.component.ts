@@ -5,6 +5,7 @@ import { EventosComponent } from "./eventos/eventos.component";
 import { EnlacePropiedadesComponent } from "./Enlace-Propiedades/Enlace-Propiedades.component";
 import { DadoComponent } from './dado/dado.component';
 import { CronometroComponent } from './Cronometro/Cronometro.component';
+import { SelectorNumericoComponent } from './selector-numerico/selector-numerico.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { CronometroComponent } from './Cronometro/Cronometro.component';
     EventosComponent, 
     EnlacePropiedadesComponent,
     DadoComponent,
-    CronometroComponent
+    CronometroComponent,
+    SelectorNumericoComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
