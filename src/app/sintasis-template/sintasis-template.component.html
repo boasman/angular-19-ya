@@ -1,0 +1,48 @@
+<div>
+  <h1>Empleado</h1>
+  <p>Nombre del Empleado: {{nombre}}</p>
+  <p>Edad: {{edad}}</p>
+
+  @if(edad>=18){
+    <p>Es mayor de edad</p>
+  }
+  @else {
+    <p>Es menor de edad</p>
+  }
+
+  <h1>Listado de articulos</h1>
+
+  <table>
+    <thead>
+      <th>Codigo:</th>
+      <th>Descripcion:</th>
+      <th>Precio:</th>
+    </thead>
+    <tbody>
+      @for(articulo of articulos; track articulo.codigo){
+        <tr>
+          <td>{{articulo.codigo}}</td>
+          <td>{{articulo.description}}</td>
+          <td>{{articulo.precio}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <h1>Numero aleatorio entre 1 y  3</h1>
+
+  @switch (generarNumero()) {
+
+    @case(1){
+      <p>Uno</p>
+    }
+    @case(2){
+      <p>Dos</p>
+    }
+    @case(3){
+      <p>Tres</p>
+    }
+
+  }
+</div>
+<router-outlet />

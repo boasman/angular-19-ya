@@ -5,8 +5,14 @@
 <div>
   <p>Nombre del empleado: {{nombre}}</p>
   <p>Edad: {{edad}}</p>
+  
+  <p>En 5 anos el empleado tengrada {{edad + 5}}</p>
+
+  <p><a href="{{sitioWeb}}">Ir a google</a></p>
 
   <p>Los ultimos 3 sueldos son: {{sueldos[0]}} {{sueldos[1]}} {{sueldos[2]}}</p>
+
+  <p>el monto total de los ultimos 3 sueldos es: {{sueldos[0] + sueldos[1] + sueldos[2]}}</p>
 
   <p>En los ultimos 3 meses ha ganado: {{ultimos3sueldos()}}</p>
   <p>{{esActivo()}}</p>

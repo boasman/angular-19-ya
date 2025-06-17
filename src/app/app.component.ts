@@ -9,13 +9,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  
+
   title = 'angular-19-ya';
   nombre = 'Rodriguez Pablo';
   edad = 40;
   email = 'rpablo@gmail.com';
   sueldos= [1700,1600,1900];
   activo = true;
+
+  sitioWeb= 'https://www.google.com'; 
 
  esActivo(){
 
