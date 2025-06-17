@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input, Input, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-selector-numerico-two',
@@ -9,15 +9,20 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SelectorNumericoTwoComponent implements OnInit {
   
-  @Input() minimo: number = 1;
-  @Input() maximo: number = 1; 
+  // @Input() minimo: number = 1;
+  // @Input({required: true}) minimo!: number;
+  // @Input() maximo: number = 1; 
+
+  maximo  = input<number>();
+  minimo =  input<number>();
 
   constructor() { }
 
-  actual: number = 1;
+  // actual: number = 1;
+  actual = signal<number>();
 
   ngOnInit() {
-    this.actual = this.minimo;
+    this.actual.set(this.minimo) = this.minimo;
   }
 
   incrementar() {
