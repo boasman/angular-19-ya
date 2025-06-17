@@ -1,4 +1,4 @@
-import { Component, input, Input, OnInit, signal } from '@angular/core';
+import { Component, effect, input, Input, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-selector-numerico-two',
@@ -10,34 +10,44 @@ import { Component, input, Input, OnInit, signal } from '@angular/core';
 export class SelectorNumericoTwoComponent implements OnInit {
   
   // @Input() minimo: number = 1;
-  // @Input({required: true}) minimo!: number;
   // @Input() maximo: number = 1; 
 
-  maximo  = input<number>();
-  minimo =  input<number>();
+  minimo =  input.required<number>();
+  maximo = input.required<number>();
 
-  constructor() { }
+  actual  = signal(0);
+
+  constructor() { 
+
+    effect(() => {
+      if(this.minimo() !== undefined && this.maximo() !== undefined){
+        this.actual.set(this.minimo())
+      }
+    })    
+  }
 
   // actual: number = 1;
-  actual = signal<number>();
+  
 
   ngOnInit() {
-    this.actual.set(this.minimo) = this.minimo;
+    // this.actual = this.minimo;
   }
 
   incrementar() {
-    if (this.actual < this.maximo)
-      this.actual++;
+    if (this.actual() < this.maximo())
+      this.actual.update(v => v + 1 );
   }
 
   decrementar() {
-    if (this.actual > this.minimo)
-      this.actual--;
+    if (this.actual() > this.minimo())
+      this.actual.update(v => v - 1)
   }
 
   fijar(v: number) {
-    if (v >= this.minimo && v <= this.maximo)
-      this.actual = v;
+    if (v >= this.minimo() && v <= this.maximo())
+      // this.actual = v;
+
+    this.actual.set(v);
   }
 
 }

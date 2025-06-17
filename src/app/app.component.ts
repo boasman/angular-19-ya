@@ -33,59 +33,59 @@ actualizar(t: number) {
   this.mensaje = t + ' (se actualiza cada 10 segundos)';
 }
 
-  title = 'angular-19-ya';
-  nombre = 'Rodriguez Pablo';
-  edad = 40;
-  email = 'rpablo@gmail.com';
-  sueldos= [1700,1600,1900];
-  activo = true;
-  resultado= '';
+  // title = 'angular-19-ya';
+  // nombre = 'Rodriguez Pablo';
+  // edad = 40;
+  // email = 'rpablo@gmail.com';
+  // sueldos= [1700,1600,1900];
+  // activo = true;
+  // resultado= '';
 
 
   
- valor1: number = this.retornarAleatorio();
- valor2: number = this.retornarAleatorio();
- valor3: number = this.retornarAleatorio();
+//  valor1: number = this.retornarAleatorio();
+//  valor2: number = this.retornarAleatorio();
+//  valor3: number = this.retornarAleatorio();
 
-  sitioWeb= 'https://www.google.com'; 
+//   sitioWeb= 'https://www.google.com'; 
 
 
- esActivo(){
+//  esActivo(){
 
-  if(this.activo){
-    return 'Trabajador activo';
-  }
-  else{
-    return 'Trabajador inactivo'; 
-  }
- }
+//   if(this.activo){
+//     return 'Trabajador activo';
+//   }
+//   else{
+//     return 'Trabajador inactivo'; 
+//   }
+//  }
 
- ultimos3sueldos(){
-  let suma = 0;
+//  ultimos3sueldos(){
+//   let suma = 0;
 
-  for(let x=0; x>this.sueldos.length; x++){
-    suma += this.sueldos[x];
-  }
- }
+//   for(let x=0; x>this.sueldos.length; x++){
+//     suma += this.sueldos[x];
+//   }
+//  }
 
- retornarAleatorio(){
-  return Math.floor(Math.random() * 6 ) + 1;
-}
+//  retornarAleatorio(){
+//   return Math.floor(Math.random() * 6 ) + 1;
+// }
 
-tirar(){
+// tirar(){
 
-  this.valor1 = this.retornarAleatorio();
-  this.valor2 = this.retornarAleatorio();
-  this.valor3 = this.retornarAleatorio();
+//   this.valor1 = this.retornarAleatorio();
+//   this.valor2 = this.retornarAleatorio();
+//   this.valor3 = this.retornarAleatorio();
 
-  if(this.valor1 === this.valor2 && this.valor1 === this.valor3){
-    this.
-    resultado = 'Gano'
-  }
-  else{
-    this.resultado = 'Perdio';
-  }
-}
+//   if(this.valor1 === this.valor2 && this.valor1 === this.valor3){
+//     this.
+//     resultado = 'Gano'
+//   }
+//   else{
+//     this.resultado = 'Perdio';
+//   }
+// }
 
   @ViewChild('selector1') selector1!: SelectorNumericoTwoComponent;
   @ViewChild('selector2') selector2!: SelectorNumericoTwoComponent;

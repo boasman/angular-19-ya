@@ -55,15 +55,15 @@
  </div> -->
 
  <div>
-  <app-selector-numerico-two [minimo]="1" [maximo]="10" #selector1></app-selector-numerico-two>
+  <app-selector-numerico-two [minimo]="0" [maximo]="20" #selector1></app-selector-numerico-two>
   <br>  
-  <button (click)="fijarSelector1(1)">Fijar en 1</button><br>
+  <button (click)="fijarSelector1(0)">Fijar en 1</button><br>
   <button (click)="fijarSelector1(5)">Fijar en 5</button><br>
-  <button (click)="fijarSelector1(10)">Fijar en 10</button>
+  <button (click)="fijarSelector1(20)">Fijar en 20</button>
   <hr>
-  <app-selector-numerico-two [minimo]="1" [maximo]="10" #selector2></app-selector-numerico-two>    
+  <app-selector-numerico-two [minimo]="1" [maximo]="20" #selector2></app-selector-numerico-two>    
   <br>
-  <button (click)="fijarSelector2(1)">Fijar en 1</button><br>
+  <button (click)="fijarSelector2(0)">Fijar en 1</button><br>
   <button (click)="fijarSelector2(5)">Fijar en 5</button><br>
-  <button (click)="fijarSelector2(10)">Fijar en 10</button>  
+  <button (click)="fijarSelector2(20)">Fijar en 20</button>  
 </div>
