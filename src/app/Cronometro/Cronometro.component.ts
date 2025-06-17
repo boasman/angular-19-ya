@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, effect, input, OnInit, output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-Cronometro',
@@ -8,20 +8,29 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CronometroComponent implements OnInit {
 
-  constructor() { }
+  segundo = signal(0);
+  inicio = input(0)
+  multiplo10 = output<number>();
 
-  ngOnInit() {
-    this.segundo = this.inicio;
+    constructor() {
+    
+    effect(() => {
+      this.segundo.set(this.inicio());
+    });
 
+    
     setInterval(() => {
-      this.segundo++;
-      if(this.segundo % 10 == 0)
-        this.multiplo10.emit(this.segundo);      
-    }, 1000)
+      let nuevoValor = this.segundo() + 1;
+      this.segundo.set(nuevoValor);
+
+      if (nuevoValor % 10 === 0) {
+        this.multiplo10.emit(nuevoValor);
+      }
+    }, 1000);
   }
 
-  segundo = 0;
-  @Input() inicio: number = 0;
-  @Output() multiplo10 = new EventEmitter<number>();
+  ngOnInit() {
+
+  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, signal, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SintasisTemplateComponent } from "./sintasis-template/sintasis-template.component";
 import { EventosComponent } from "./eventos/eventos.component";
@@ -26,11 +26,11 @@ import { SelectorNumericoTwoComponent } from './selector-numerico-two/selector-n
 })
 export class AppComponent {
 
-  mensaje = ''
+  mensaje = signal('')
 
 
 actualizar(t: number) {
-  this.mensaje = t + ' (se actualiza cada 10 segundos)';
+  this.mensaje.update(x => t + ' (se actualiza cada 10 segundos)');
 }
 
   // title = 'angular-19-ya';
