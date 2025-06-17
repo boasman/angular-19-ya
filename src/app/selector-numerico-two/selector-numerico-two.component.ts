@@ -8,9 +8,6 @@ import { Component, effect, input, Input, OnInit, signal } from '@angular/core';
   styleUrls: ['./selector-numerico-two.component.css']
 })
 export class SelectorNumericoTwoComponent implements OnInit {
-  
-  // @Input() minimo: number = 1;
-  // @Input() maximo: number = 1; 
 
   minimo =  input.required<number>();
   maximo = input.required<number>();
@@ -24,10 +21,7 @@ export class SelectorNumericoTwoComponent implements OnInit {
         this.actual.set(this.minimo())
       }
     })    
-  }
-
-  // actual: number = 1;
-  
+  }  
 
   ngOnInit() {
     // this.actual = this.minimo;
@@ -44,10 +38,8 @@ export class SelectorNumericoTwoComponent implements OnInit {
   }
 
   fijar(v: number) {
-    if (v >= this.minimo() && v <= this.maximo())
-      // this.actual = v;
-
-    this.actual.set(v);
+    if (v >= this.minimo() && v <= this.maximo())      
+      this.actual.set(v);
   }
 
 }
