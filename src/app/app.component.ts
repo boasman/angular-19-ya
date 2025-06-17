@@ -4,6 +4,7 @@ import { SintasisTemplateComponent } from "./sintasis-template/sintasis-template
 import { EventosComponent } from "./eventos/eventos.component";
 import { EnlacePropiedadesComponent } from "./Enlace-Propiedades/Enlace-Propiedades.component";
 import { DadoComponent } from './dado/dado.component';
+import { CronometroComponent } from './Cronometro/Cronometro.component';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +14,20 @@ import { DadoComponent } from './dado/dado.component';
     SintasisTemplateComponent, 
     EventosComponent, 
     EnlacePropiedadesComponent,
-    DadoComponent
+    DadoComponent,
+    CronometroComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  mensaje = ''
+
+
+actualizar(t: number) {
+  this.mensaje = t + ' (se actualiza cada 10 segundos)';
+}
 
   title = 'angular-19-ya';
   nombre = 'Rodriguez Pablo';
@@ -35,6 +44,7 @@ export class AppComponent {
  valor3: number = this.retornarAleatorio();
 
   sitioWeb= 'https://www.google.com'; 
+
 
  esActivo(){
 
@@ -59,7 +69,7 @@ export class AppComponent {
 }
 
 tirar(){
-  
+
   this.valor1 = this.retornarAleatorio();
   this.valor2 = this.retornarAleatorio();
   this.valor3 = this.retornarAleatorio();
