@@ -24,8 +24,17 @@
 
 <!-- <router-outlet></router-outlet> -->
 <!-- <app-Enlace-Propiedades></app-Enlace-Propiedades> -->
- <div style="text-aling:center">
-  <app-dado></app-dado>
-  <app-dado></app-dado>
-  <app-dado></app-dado>
+
+
+ <div style="text-align:center">
+  <!-- <app-dado valor="{{valor1}}"></app-dado>
+  <app-dado valor="{{valor2}}"></app-dado>
+  <app-dado valor="{{valor3}}"></app-dado> -->
+  <app-dado [valor]="valor1"></app-dado>
+  <app-dado [valor]="valor2"></app-dado>
+  <app-dado [valor]="valor3"></app-dado>
+  <hr>
+  <button (click)="tirar()">Tirar</button>
+  <hr>
+  <p>Resultado: {{resultado}}</p>
  </div>

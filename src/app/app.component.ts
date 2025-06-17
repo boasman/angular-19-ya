@@ -26,6 +26,13 @@ export class AppComponent {
   email = 'rpablo@gmail.com';
   sueldos= [1700,1600,1900];
   activo = true;
+  resultado= '';
+
+
+  
+ valor1: number = this.retornarAleatorio();
+ valor2: number = this.retornarAleatorio();
+ valor3: number = this.retornarAleatorio();
 
   sitioWeb= 'https://www.google.com'; 
 
@@ -46,4 +53,28 @@ export class AppComponent {
     suma += this.sueldos[x];
   }
  }
+
+ retornarAleatorio(){
+  return Math.floor(Math.random() * 6 ) + 1;
 }
+
+tirar(){
+  
+  this.valor1 = this.retornarAleatorio();
+  this.valor2 = this.retornarAleatorio();
+  this.valor3 = this.retornarAleatorio();
+
+  if(this.valor1 === this.valor2 && this.valor1 === this.valor3){
+    this.
+    resultado = 'Gano'
+  }
+  else{
+    this.resultado = 'Perdio';
+  }
+}
+
+
+}
+
+
+
