@@ -25,7 +25,7 @@ export class FormularioReactivosThreeComponent implements OnInit {
 
   if(this.formularioConversion.value.numeroDecimal){
     debugger
-    if(this.formularioConversion.value.base == 'Hexadecimal'){
+    if(this.formularioConversion.value.base == 'hexadecimal'){
       this.conversion =  parseInt(this.formularioConversion.value.numeroDecimal).toString(16);
     }
 
@@ -35,18 +35,11 @@ export class FormularioReactivosThreeComponent implements OnInit {
 
     if(this.formularioConversion.value.numeroDecimal && this.formularioConversion.value.potencia){
       this.potenciaNumero = Math.pow(parseInt(this.formularioConversion.value.numeroDecimal), parseInt(this.formularioConversion.value.potencia)).toString();
-    }
+    }          
 
     if(this.formularioConversion.value.largo){
       this.cantidad =  this.formularioConversion.value.numeroDecimal.length.toString();
     }
-
-
-
-
-
-
-
   }
  }
 
