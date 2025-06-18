@@ -156,10 +156,7 @@ export class FormularioPlantillasComponent implements OnInit {
     this.art.set({codigo: 0, descripcion: '', precio: 0});
 
 
-  }
-
-
-  
+  } 
 
   constructor() { }
 

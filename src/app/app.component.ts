@@ -10,6 +10,7 @@ import { SelectorNumericoTwoComponent } from './selector-numerico-two/selector-n
 import { FormsModule } from '@angular/forms'; 
 import { CommonModule } from '@angular/common';
 import { FormularioPlantillasComponent } from "./formulario-plantillas/formulario-plantillas.component";
+import { FormularioReactivosComponent } from "./formulario-reactivos/formulario-reactivos.component";
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ import { FormularioPlantillasComponent } from "./formulario-plantillas/formulari
     SelectorNumericoTwoComponent,
     FormsModule,
     CommonModule,
-    FormularioPlantillasComponent
+    FormularioPlantillasComponent,
+    FormularioReactivosComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
