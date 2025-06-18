@@ -14,6 +14,7 @@ import { FormularioReactivosComponent } from "./formulario-reactivos/formulario-
 import { FormularioReactivoTwoComponent } from "./formulario-reactivo-two/formulario-reactivo-two.component";
 import { FormularioReactivosThreeComponent } from "./formulario-reactivos-three/formulario-reactivos-three.component";
 import { FormuariloReactivoAndidadosComponent } from "./formuarilo-reactivo-andidados/formuarilo-reactivo-andidados.component";
+import { ValidacionesStandarComponent } from "./validaciones-standar/validaciones-standar.component";
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,8 @@ import { FormuariloReactivoAndidadosComponent } from "./formuarilo-reactivo-andi
     FormularioReactivosComponent,
     FormularioReactivoTwoComponent,
     FormularioReactivosThreeComponent,
-    FormuariloReactivoAndidadosComponent
+    FormuariloReactivoAndidadosComponent,
+    ValidacionesStandarComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
