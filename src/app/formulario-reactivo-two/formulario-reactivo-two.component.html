@@ -1,3 +1,19 @@
+<form [formGroup]="formularioContacto" (ngSubmit)="submit()">
 <p>
-  formulario-reactivo-two works!
+  Nombre:
+  <input type="text" formControlName="nombre">
 </p>
+<p>
+  Mail:
+  <input type="text" formControlName="mail">
+</p>
+<p>
+  Mensaje <br>
+  <textarea name="" rows="10" cols="70" formControlName="mensaje" id=""></textarea>
+</p>
+<button type="submit">Confirmar</button>
+</form>
+<br>
+<div>
+  {{datos}}
+</div>

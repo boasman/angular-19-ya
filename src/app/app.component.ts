@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FormularioPlantillasComponent } from "./formulario-plantillas/formulario-plantillas.component";
 import { FormularioReactivosComponent } from "./formulario-reactivos/formulario-reactivos.component";
+import { FormularioReactivoTwoComponent } from "./formulario-reactivo-two/formulario-reactivo-two.component";
+import { FormularioReactivosThreeComponent } from "./formulario-reactivos-three/formulario-reactivos-three.component";
 
 @Component({
   selector: 'app-root',
@@ -26,7 +28,9 @@ import { FormularioReactivosComponent } from "./formulario-reactivos/formulario-
     FormsModule,
     CommonModule,
     FormularioPlantillasComponent,
-    FormularioReactivosComponent
+    FormularioReactivosComponent,
+    FormularioReactivoTwoComponent,
+    FormularioReactivosThreeComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
