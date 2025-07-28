@@ -1,15 +1,14 @@
 import { Component, signal, ViewChild } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { SelectorNumericoTwoComponent } from './selector-numerico-two/selector-numerico-two.component';
-import { RutasDefinicionComponent } from "./Rutas/Rutas-Definicion/Rutas-Definicion.component";
-import { RutaNoExistenteComponent } from "./RutaNoExistente/RutaNoExistente.component";
+import { ServicioComponent } from "./Servicio/Servicio.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-     RouterOutlet,
-     RouterLink,
+    RouterOutlet,
+    RouterLink,
+    ServicioComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
