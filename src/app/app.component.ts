@@ -1,25 +1,15 @@
 import { Component, signal, ViewChild } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { SintasisTemplateComponent } from './sintasis-template/sintasis-template.component';
-import { EventosComponent } from './eventos/eventos.component';
-import { EnlacePropiedadesComponent } from './Enlace-Propiedades/Enlace-Propiedades.component';
-import { DadoComponent } from './dado/dado.component';
-import { CronometroComponent } from './Cronometro/Cronometro.component';
-import { SelectorNumericoComponent } from './selector-numerico/selector-numerico.component';
 import { SelectorNumericoTwoComponent } from './selector-numerico-two/selector-numerico-two.component';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-
-import { FormularioReactivosThreeComponent } from "./formulario-reactivos-three/formulario-reactivos-three.component";
-import { FormuariloReactivoAndidadosComponent } from "./formuarilo-reactivo-andidados/formuarilo-reactivo-andidados.component";
-
 import { RutasDefinicionComponent } from "./Rutas/Rutas-Definicion/Rutas-Definicion.component";
+import { RutaNoExistenteComponent } from "./RutaNoExistente/RutaNoExistente.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RutasDefinicionComponent,RouterOutlet,RouterLink
+     RouterOutlet,
+     RouterLink,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -29,8 +19,8 @@ export class AppComponent {
   // nombre  = signal('');
   // apellido = signal('')
 
-  nombre = '';
-  apellido= '';
+  // nombre = '';
+  // apellido= '';
 
   constructor(){
       // this.nombre.set('Maria')
@@ -48,11 +38,11 @@ export class AppComponent {
 
   // ]);
 
-  mensaje = signal('');
+  // mensaje = signal('');
 
-  actualizar(t: number) {
-    this.mensaje.update((x) => t + ' (se actualiza cada 10 segundos)');
-  }
+  // actualizar(t: number) {
+  //   this.mensaje.update((x) => t + ' (se actualiza cada 10 segundos)');
+  // }
 
   // title = 'angular-19-ya';
   // nombre = 'Rodriguez Pablo';
@@ -105,14 +95,14 @@ export class AppComponent {
   //   }
   // }
 
-  @ViewChild('selector1') selector1!: SelectorNumericoTwoComponent;
-  @ViewChild('selector2') selector2!: SelectorNumericoTwoComponent;
+  // @ViewChild('selector1') selector1!: SelectorNumericoTwoComponent;
+  // @ViewChild('selector2') selector2!: SelectorNumericoTwoComponent;
 
-  fijarSelector1(valor: number) {
-    this.selector1.fijar(valor);
-  }
+  // fijarSelector1(valor: number) {
+  //   this.selector1.fijar(valor);
+  // }
 
-  fijarSelector2(valor: number) {
-    this.selector2.fijar(valor);
-  }
+  // fijarSelector2(valor: number) {
+  //   this.selector2.fijar(valor);
+  // }
 }
