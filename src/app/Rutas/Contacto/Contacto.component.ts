@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, Signal, signal } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -11,7 +11,8 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule }
 })
 export class ContactoComponent implements OnInit {
 
-  datos  = signal<string>('');
+
+  datos = signal('')
 
   constructor() { }
 
@@ -20,19 +21,23 @@ export class ContactoComponent implements OnInit {
 
   fb = inject(FormBuilder);
 
-  formularioContacto = new FormGroup({
+  formularioContacto: FormGroup = this.fb.group({
 
-    nombre: new FormControl(''),
-    mail: new FormControl(''),
-    mensaje: new FormControl('')
+    nombre: [''],
+    mail: [''],
+    mensaje: ['']
 
   });
 
   submit(){
-    this.datos.update(result => `Nombre=${this.formularioContacto.value.nombre}
-                Mail=${this.formularioContacto.value.mail}
-                Mensaje=${this.formularioContacto.value.mensaje}
-                `);
+
+    const {nombre, mail, mensaje} = this.formularioContacto.value;
+
+    this.datos.set(
+      `Nombre=${nombre}\nMail=${mail}\nMensaje=${mensaje}`
+    )
+
+
   }
 
 }

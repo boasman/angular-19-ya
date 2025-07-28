@@ -1,4 +1,4 @@
-<form [formGroup]="formularioContacto" (ngsubmit)="submit()">
+<form [formGroup]="formularioContacto" (ngSubmit)="submit()">
 
   <p>Nombre: <input type="text" formControlName="nombre"></p>
   <p>Mail: <input type="text" formControlName="mail"></p>
@@ -9,6 +9,7 @@
   <button type="submit">Confirmar</button>
 
 </form>
+
 <div>
-  {{datos}}
+  {{datos()}}
 </div>

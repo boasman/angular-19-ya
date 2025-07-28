@@ -1,5 +1,5 @@
 import { Component, signal, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { SintasisTemplateComponent } from './sintasis-template/sintasis-template.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { EnlacePropiedadesComponent } from './Enlace-Propiedades/Enlace-Propiedades.component';
@@ -7,34 +7,19 @@ import { DadoComponent } from './dado/dado.component';
 import { CronometroComponent } from './Cronometro/Cronometro.component';
 import { SelectorNumericoComponent } from './selector-numerico/selector-numerico.component';
 import { SelectorNumericoTwoComponent } from './selector-numerico-two/selector-numerico-two.component';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FormularioPlantillasComponent } from "./formulario-plantillas/formulario-plantillas.component";
-import { FormularioReactivosComponent } from "./formulario-reactivos/formulario-reactivos.component";
-import { FormularioReactivoTwoComponent } from "./formulario-reactivo-two/formulario-reactivo-two.component";
+
 import { FormularioReactivosThreeComponent } from "./formulario-reactivos-three/formulario-reactivos-three.component";
 import { FormuariloReactivoAndidadosComponent } from "./formuarilo-reactivo-andidados/formuarilo-reactivo-andidados.component";
-import { ValidacionesStandarComponent } from "./validaciones-standar/validaciones-standar.component";
+
+import { RutasDefinicionComponent } from "./Rutas/Rutas-Definicion/Rutas-Definicion.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    SintasisTemplateComponent,
-    EventosComponent,
-    EnlacePropiedadesComponent,
-    DadoComponent,
-    CronometroComponent,
-    SelectorNumericoComponent,
-    SelectorNumericoTwoComponent,
-    FormsModule,
-    CommonModule,
-    FormularioPlantillasComponent,
-    FormularioReactivosComponent,
-    FormularioReactivoTwoComponent,
-    FormularioReactivosThreeComponent,
-    FormuariloReactivoAndidadosComponent,
-    ValidacionesStandarComponent
+    RutasDefinicionComponent,RouterOutlet,RouterLink
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { ContactoComponent } from './Rutas/Contacto/Contacto.component';
-import { AcercaDeComponent } from './Rutas/acercaDe/acercaDe.component';
+import { ContactoComponent } from '../Contacto/Contacto.component';
+import { AcercaDeComponent } from '../acercaDe/acercaDe.component';
+
 
 export const routes: Routes = [
   {
