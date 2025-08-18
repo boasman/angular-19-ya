@@ -4,4 +4,14 @@
     <th>Descripcion</th>
     <th>Precio</th>
   </thead>
+  <tbody>
+    @for (articulo of articulos; track articulo.codigo) {
+      <tr>
+        <td>{{articulos.codigo}}</td>
+        <td>{{articulos.description}}</td>
+        <td>{{articulos.precio}}</td>
+      </tr>
+    }
+  </tbody>
 </table>
+<router-outlet />
